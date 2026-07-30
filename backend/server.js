@@ -4,6 +4,7 @@ require('dotenv').config();
 const pool = require('./src/db/db');
 const authRoutes = require('./src/routes/auth');
 const taskRoutes = require('./src/routes/tasks');
+require('./src/cron/notifyDueTasks');
 
 const app = express();
 
