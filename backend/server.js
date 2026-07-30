@@ -2,11 +2,14 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const pool = require('./src/db/db');
+const authRoutes = require('./src/routes/auth');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.use('/api/auth', authRoutes);
 
 // Ruta de prueba de conexión a la base de datos
 app.get('/', async (req, res) => {
