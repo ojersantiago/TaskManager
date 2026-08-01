@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://task-manager-backend-mcoz.onrender.com/api';
 
 // Redirigir si ya está logueado
 if (localStorage.getItem('token')) {
